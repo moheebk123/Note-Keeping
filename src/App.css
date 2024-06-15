@@ -19,7 +19,7 @@
     height: 35px;
     z-index: 10;
 
-    &.close-container {
+    &:is(.close-container, .pin-container) {
       position: absolute;
       top: 5px;
       right: 5px;

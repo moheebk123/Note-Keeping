@@ -21,19 +21,10 @@ function Note({ note }) {
 
   return (
     <div className="rounded-md shadow-lg border-slate-300 border cursor-pointer relative">
-      <CardActionArea
-        className="w-full h-full"
-        sx={{ padding: "15px" }}
-        onClick={() => changeNoteData(note)}
-      >
-        <h2 className="text-xl font-bold capitalize flex justify-between gap-3">
-          {/* Note Title */}
-          {note.title}
-
           {/* Pin or Unpin Icon */}
           <Fab
             color={note.pinned ? "warning" : ""}
-            className="icon-container"
+            className="icon-container pin-container"
             onClick={() => handleUpdate()}
           >
             {note.pinned ? (
@@ -46,6 +37,15 @@ function Note({ note }) {
               </Tooltip>
             )}
           </Fab>
+
+      <CardActionArea
+        className="w-full h-full"
+        sx={{ padding: "15px" }}
+        onClick={() => changeNoteData(note)}
+      >
+          {/* Note Title */}
+        <h2 className="text-xl font-bold capitalize mr-4">
+          {note.title}
         </h2>
 
         {/* Note Tagline */}
