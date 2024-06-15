@@ -1,4 +1,4 @@
-import icon from "../../public/icon.png"
+import icon from "/icon.png"
 
 function Heading() {
   return (
