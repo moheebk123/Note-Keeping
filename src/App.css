@@ -1,0 +1,50 @@
+#root {
+  width: 100vw;
+  max-width: 1280px;
+  min-height: 100vh;
+  height: max-content;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-left: 1em;
+  position: relative;
+
+  & .message {
+    width: 100vw;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  & .icon-container {
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+
+    &.close-container {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  & .editable-tab {
+    width: calc(100vw - 20px);
+    max-width: 1200px;
+    height: max-content;
+    max-height: 95vh;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    box-shadow: 0 0 0 100vh #00000071;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
