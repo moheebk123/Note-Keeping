@@ -73,7 +73,7 @@ function EditableNote({ note, hideEditableNote, showAlert }) {
       {/* Note Title */}
       <h2
         ref={titleRef}
-        className="text-xl font-bold capitalize mb-4"
+        className="text-xl font-bold capitalize mb-4 p-2 outline-slate-400"
         contentEditable={editable}
       >
         {note.title}
@@ -82,14 +82,18 @@ function EditableNote({ note, hideEditableNote, showAlert }) {
       {/* Note Tagline */}
       <h4
         ref={taglineRef}
-        className="text-lg font-bold text-slate-600 my-2 py-2 border-y"
+        className="text-lg font-bold text-slate-600 my-2 p-2 border-y border-slate-400 outline-slate-400"
         contentEditable={editable}
       >
         {note.tagline}
       </h4>
 
       {/* Note Content */}
-      <p ref={contentRef} className="mt-4 mb-7" contentEditable={editable}>
+      <p
+        ref={contentRef}
+        className="mt-4 mb-7 p-2 outline-slate-400"
+        contentEditable={editable}
+      >
         {note.content}
       </p>
 
